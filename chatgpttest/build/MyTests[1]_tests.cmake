@@ -1,0 +1,5 @@
+add_test([=[MathTest.Add]=]  /workspace/cpp-practice/chatgpttest/build/MyTests [==[--gtest_filter=MathTest.Add]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[MathTest.Add]=]  PROPERTIES WORKING_DIRECTORY /workspace/cpp-practice/chatgpttest/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[MathTest.Subtract]=]  /workspace/cpp-practice/chatgpttest/build/MyTests [==[--gtest_filter=MathTest.Subtract]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[MathTest.Subtract]=]  PROPERTIES WORKING_DIRECTORY /workspace/cpp-practice/chatgpttest/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  MyTests_TESTS MathTest.Add MathTest.Subtract)
